@@ -67,3 +67,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const lightIcon = document.getElementById('theme-icon-light');
+    const darkIcon = document.getElementById('theme-icon-dark');
+    const userTheme = localStorage.getItem('theme');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Function to switch icons
+    const toggleIcons = (isDark) => {
+        darkIcon.classList.toggle('hidden', isDark);
+        lightIcon.classList.toggle('hidden', !isDark);
+    };
+
+    // Check theme on initial load
+    if (userTheme === 'dark' || (!userTheme && systemTheme)) {
+        document.documentElement.classList.add('dark');
+        toggleIcons(true);
+    } else {
+        toggleIcons(false);
+    }
+
+    // Listener for toggle button
+    themeToggleBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        toggleIcons(isDark);
+    });
+});
