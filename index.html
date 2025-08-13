@@ -196,49 +196,40 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Navigation Bar (Simple) -->
-   <!-- Navigation Bar (Corrected) -->
-<nav class="bg-white dark:bg-gray-800 shadow-md p-4 sticky top-0 z-40 transition-colors duration-300">
-    <div class="container mx-auto flex justify-between items-center">
-        <!-- Logo -->
-        <a href="#" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Mahak Rathi</a>
-
-        <!-- Right-side Controls Container -->
-        <div class="flex items-center space-x-2 sm:space-x-4">
-            <!-- Desktop Menu Links -->
-            <div class="hidden md:flex space-x-6">
-                <a href="#hero" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Home</a>
-                <a href="#about" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">About</a>
-                <a href="#skills" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Skills</a>
-                <a href="#projects" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Projects</a>
-                <a href="#education-experience" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Education & Experience</a>
-                <a href="#certifications-achievements" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Certifications</a>
-                <a href="#contact" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Contact</a>
+    <!-- Navigation Bar -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md p-4 sticky top-0 z-40 transition-colors duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Mahak Rathi</a>
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <div class="hidden md:flex space-x-6">
+                    <a href="#hero" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Projects</a>
+                    <a href="#education-experience" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Education & Experience</a>
+                    <a href="#certifications-achievements" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Certifications</a>
+                    <a href="#contact" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Contact</a>
+                </div>
+                <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 focus:outline-none transition-all duration-300 hover:scale-105">
+                    <i class="fas fa-sun text-yellow-500 text-lg dark:hidden"></i>
+                    <i class="fas fa-moon text-indigo-400 text-lg hidden dark:inline-block"></i>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300 text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-
-            <!-- Theme Toggle Button (MOVED HERE) -->
-            <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 focus:outline-none transition-all duration-300 hover:scale-105">
-                <i class="fas fa-sun text-yellow-500 text-lg dark:hidden"></i>
-                <i class="fas fa-moon text-indigo-400 text-lg hidden dark:inline-block"></i>
-            </button>
-
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300 text-2xl focus:outline-none">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-        <a href="#hero" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Home</a>
-        <a href="#about" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">About</a>
-        <a href="#skills" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Skills</a>
-        <a href="#projects" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Projects</a>
-        <a href="#education-experience" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Education & Experience</a>
-        <a href="#certifications-achievements" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Certifications</a>
-        <a href="#contact" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Contact</a>
-    </div>
-</nav>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+            <a href="#hero" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Home</a>
+            <a href="#about" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">About</a>
+            <a href="#skills" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Skills</a>
+            <a href="#projects" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Projects</a>
+            <a href="#education-experience" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Education & Experience</a>
+            <a href="#certifications-achievements" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Certifications</a>
+            <a href="#contact" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Contact</a>
+        </div>
+    </nav>
+    
     <!-- Hero Section -->
     <section id="hero" class="relative h-screen flex items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 overflow-hidden">
         <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Background+Image');"></div>
@@ -265,7 +256,7 @@
     <section id="about" class="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <div class="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12">
             <div class="lg:w-1/3 flex justify-center">
-                <<img src="profile.jpg" alt="Mahak Rathi" class="rounded-full shadow-xl w-64 h-64 object-cover border-4 border-indigo-500 transition-transform duration-500 transform hover:scale-105">
+                <img src="profile.jpg" alt="Mahak Rathi" class="rounded-full shadow-xl w-64 h-64 object-cover border-4 border-indigo-500 transition-transform duration-500 transform hover:scale-105">
             </div>
             <div class="lg:w-2/3 text-center lg:text-left">
                 <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
@@ -541,27 +532,6 @@
         </div>
     </section>
 
-    <!-- AI Assistant Chat Widget -->
-    <section id="ai-chat" class="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
-        <div class="container mx-auto px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">Talk to my AI Assistant!</h2>
-            <div class="glass-card mx-auto p-8 max-w-lg shadow-lg flex flex-col h-[500px]">
-                <div id="chat-window" class="flex-grow bg-gray-100 dark:bg-gray-700 p-4 rounded-lg overflow-y-auto text-left mb-4 shadow-inner">
-                    <p class="text-gray-600 dark:text-gray-300 mb-2"><strong>AI Assistant:</strong> Hello! I'm Mahak's AI assistant. Ask me anything about her skills, projects, education, or experience!</p>
-                </div>
-                <div class="flex items-center">
-                    <input type="text" id="user-input" class="flex-grow shadow appearance-none border rounded-l-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-600 dark:text-white dark:border-gray-500" placeholder="Ask me a question...">
-                    <button id="send-chat-btn" class="bg-indigo-600 text-white px-6 py-3 rounded-r-lg font-semibold hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105 ml-[-1px]">
-                        <i class="fas fa-paper-plane mr-2"></i>Send ✨
-                    </button>
-                    <div id="chat-loading" class="hidden ml-4 text-indigo-600 dark:text-indigo-400">
-                        <i class="fas fa-spinner fa-spin"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
         <div class="container mx-auto px-6 lg:px-8">
@@ -623,6 +593,44 @@
         </div>
     </footer>
 
+    <!-- AI Chatbot Popup -->
+    <div id="chatbot-popup" class="fixed bottom-4 left-4 z-50 flex flex-col items-start">
+        <!-- Chat Window (hidden by default) -->
+        <div id="chatbot-window-container" class="hidden mb-2 w-80 sm:w-96 h-[500px] bg-white dark:bg-gray-800 rounded-lg shadow-2xl flex flex-col transition-all duration-300 transform origin-bottom-left scale-95 opacity-0">
+            <!-- Header -->
+            <div class="flex justify-between items-center p-4 bg-indigo-600 text-white rounded-t-lg">
+                <h3 class="font-semibold text-lg">AI Assistant</h3>
+                <button id="chatbot-close-btn" class="text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+            </div>
+            <!-- Messages -->
+            <div id="chatbot-messages" class="flex-grow p-4 overflow-y-auto text-sm space-y-4">
+                <div class="flex">
+                    <p class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg px-3 py-2 max-w-xs">
+                        <strong>AI:</strong> Hello! I'm Mahak's AI assistant. Ask me anything about her skills, projects, or experience!
+                    </p>
+                </div>
+            </div>
+            <!-- Loading Indicator -->
+            <div id="chatbot-loading" class="hidden px-4 pb-2 text-indigo-600 dark:text-indigo-400 flex items-center">
+                <i class="fas fa-spinner fa-spin mr-2"></i> Typing...
+            </div>
+            <!-- Input -->
+            <div class="p-2 border-t border-gray-200 dark:border-gray-700">
+                <div class="flex items-center">
+                    <input type="text" id="chatbot-user-input" class="flex-grow shadow-inner appearance-none border rounded-l-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-600 dark:text-white dark:border-gray-500" placeholder="Ask a question...">
+                    <button id="chatbot-send-btn" class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg font-semibold hover:bg-indigo-700 transition-colors duration-300 ml-[-1px]">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Toggle Button -->
+        <button id="chatbot-toggle-btn" class="p-4 rounded-full bg-indigo-600 text-white shadow-lg focus:outline-none transition-all duration-300 hover:bg-indigo-700 hover:scale-110">
+            <i id="chatbot-toggle-icon" class="fas fa-comments text-2xl"></i>
+        </button>
+    </div>
+
+
     <script>
         // Resume Data (for AI Assistant and Project Description)
         const mahakResumeData = {
@@ -679,24 +687,22 @@
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
 
-        // Function to set theme
         function setTheme(theme) {
             if (theme === 'dark') {
                 body.classList.add('dark');
             } else {
                 body.classList.remove('dark');
             }
-            localStorage.setItem('theme', theme); // Persist theme across sessions
+            localStorage.setItem('theme', theme);
         }
 
-        // Check for saved theme preference or system preference
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             setTheme(savedTheme);
         } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             setTheme('dark');
         } else {
-            setTheme('light'); // Default to light if no preference
+            setTheme('light');
         }
 
         themeToggle.addEventListener('click', () => {
@@ -716,9 +722,9 @@
         let taglineIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
-        let typingSpeed = 100; // milliseconds per character
-        let deletingSpeed = 50; // milliseconds per character
-        let delayBeforeTypingNext = 1500; // milliseconds before typing next tagline
+        let typingSpeed = 100;
+        let deletingSpeed = 50;
+        let delayBeforeTypingNext = 1500;
 
         function typeEffect() {
             const currentTagline = taglines[taglineIndex];
@@ -743,7 +749,7 @@
                 }
             }
         }
-        document.addEventListener('DOMContentLoaded', typeEffect); // Start typing effect when DOM is ready
+        document.addEventListener('DOMContentLoaded', typeEffect);
 
         // Scroll to Top Button Visibility
         const scrollToTopBtn = document.getElementById('scroll-to-top');
@@ -762,22 +768,21 @@
             });
         });
 
-        // Skill Bar Animation on Scroll (Basic visibility check)
+        // Skill Bar Animation on Scroll
         function animateSkillBars() {
             const skillSections = document.querySelectorAll('#skills .glass-card');
             skillSections.forEach(section => {
                 const rect = section.getBoundingClientRect();
-                // If section is in viewport
                 if (rect.top < window.innerHeight && rect.bottom > 0) {
                     section.classList.add('animate-skill-bar');
                 } else {
-                    section.classList.remove('animate-skill-bar'); // Reset if out of view
+                    section.classList.remove('animate-skill-bar');
                 }
             });
         }
 
         window.addEventListener('scroll', animateSkillBars);
-        window.addEventListener('load', animateSkillBars); // Check on load too
+        window.addEventListener('load', animateSkillBars);
 
         // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -787,7 +792,6 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
@@ -795,15 +799,12 @@
         });
 
         // --- Gemini API Integration ---
+        const API_KEY = "AIzaSyDyOWfMSKbFcC5QtV4o4KAtP9jC9FsrO3k";
 
-        const API_KEY = "AIzaSyDyOWfMSKbFcC5QtV4o4KAtP9jC9FsrO3k"; // Canvas will automatically provide the API key at runtime
-
-        // Generic function for making Gemini API calls with exponential backoff
         async function callGeminiAPI(prompt, retries = 3, delay = 1000) {
-            let chatHistory = [];
-            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+            let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
             const payload = { contents: chatHistory };
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${API_KEY}`;
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`;
 
             for (let i = 0; i < retries; i++) {
                 try {
@@ -812,92 +813,94 @@
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(payload)
                     });
-
-                    if (!response.ok) {
-                        if (response.status === 429 && i < retries - 1) { // Too Many Requests
-                            console.warn(`Rate limit hit. Retrying in ${delay / 1000}s...`);
-                            await new Promise(resolve => setTimeout(resolve, delay));
-                            delay *= 2; // Exponential backoff
-                            continue;
-                        }
-                        throw new Error(`API error: ${response.status} ${response.statusText}`);
-                    }
-
+                    if (!response.ok) throw new Error(`API error: ${response.status}`);
                     const result = await response.json();
-                    if (result.candidates && result.candidates.length > 0 &&
-                        result.candidates[0].content && result.candidates[0].content.parts &&
-                        result.candidates[0].content.parts.length > 0) {
-                        return result.candidates[0].content.parts[0].text;
-                    } else {
-                        throw new Error("Unexpected API response structure or no content.");
-                    }
+                    return result.candidates[0].content.parts[0].text;
                 } catch (error) {
                     console.error("Error calling Gemini API:", error);
                     if (i < retries - 1) {
-                        console.warn(`Attempt ${i + 1} failed. Retrying in ${delay / 1000}s...`);
                         await new Promise(resolve => setTimeout(resolve, delay));
                         delay *= 2;
                     } else {
-                        throw error; // Re-throw if all retries fail
+                        throw error;
                     }
                 }
             }
-            throw new Error("Failed to get response from Gemini API after multiple retries.");
         }
+        
+        // --- AI Chatbot Popup Logic ---
+        const chatbotToggleBtn = document.getElementById('chatbot-toggle-btn');
+        const chatbotWindow = document.getElementById('chatbot-window-container');
+        const chatbotCloseBtn = document.getElementById('chatbot-close-btn');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotUserInput = document.getElementById('chatbot-user-input');
+        const chatbotSendBtn = document.getElementById('chatbot-send-btn');
+        const chatbotLoading = document.getElementById('chatbot-loading');
+        const chatbotToggleIcon = document.getElementById('chatbot-toggle-icon');
 
-        // --- AI Assistant Chat Widget Logic ---
-        const chatWindow = document.getElementById('chat-window');
-        const userInput = document.getElementById('user-input');
-        const sendChatBtn = document.getElementById('send-chat-btn');
-        const chatLoading = document.getElementById('chat-loading');
-
-        async function sendMessage() {
-            const userMessage = userInput.value.trim();
-            if (!userMessage) return;
-
-            // Display user message
-            const userMessageDiv = document.createElement('p');
-            userMessageDiv.className = 'text-blue-700 dark:text-blue-300 mb-2';
-            userMessageDiv.innerHTML = `<strong>You:</strong> ${userMessage}`;
-            chatWindow.appendChild(userMessageDiv);
-            chatWindow.scrollTop = chatWindow.scrollHeight; // Scroll to bottom
-
-            userInput.value = ''; // Clear input
-            chatLoading.classList.remove('hidden'); // Show loading indicator
-            sendChatBtn.disabled = true;
-
-            const fullPrompt = `You are Mahak Rathi's AI assistant. Your goal is to answer questions about Mahak Rathi's professional background, skills, projects, education, certifications, and achievements ONLY based on the provided JSON data. If the answer is not available in the data, politely state that you cannot provide that information.
-
-            Mahak Rathi's Data:
-            ${JSON.stringify(mahakResumeData, null, 2)}
-
-            User's question: ${userMessage}`;
-
-            try {
-                const aiResponse = await callGeminiAPI(fullPrompt);
-
-                // Display AI response
-                const aiMessageDiv = document.createElement('p');
-                aiMessageDiv.className = 'text-gray-600 dark:text-gray-300 mb-2';
-                aiMessageDiv.innerHTML = `<strong>AI Assistant:</strong> ${aiResponse}`;
-                chatWindow.appendChild(aiMessageDiv);
-            } catch (error) {
-                console.error("Error fetching AI response:", error);
-                const errorMessageDiv = document.createElement('p');
-                errorMessageDiv.className = 'text-red-500 mb-2';
-                errorMessageDiv.innerHTML = `<strong>AI Assistant:</strong> Sorry, I'm having trouble connecting right now. Please try again later.`;
-                chatWindow.appendChild(errorMessageDiv);
-            } finally {
-                chatWindow.scrollTop = chatWindow.scrollHeight; // Scroll to bottom again
-                chatLoading.classList.add('hidden'); // Hide loading indicator
-                sendChatBtn.disabled = false;
+        function toggleChatbot() {
+            const isHidden = chatbotWindow.classList.contains('hidden');
+            if (isHidden) {
+                chatbotWindow.classList.remove('hidden');
+                setTimeout(() => {
+                    chatbotWindow.classList.remove('opacity-0', 'scale-95');
+                    chatbotWindow.classList.add('opacity-100', 'scale-100');
+                }, 10);
+                chatbotToggleIcon.classList.remove('fa-comments');
+                chatbotToggleIcon.classList.add('fa-times');
+            } else {
+                chatbotWindow.classList.remove('opacity-100', 'scale-100');
+                chatbotWindow.classList.add('opacity-0', 'scale-95');
+                setTimeout(() => {
+                    chatbotWindow.classList.add('hidden');
+                }, 300); // Match transition duration
+                chatbotToggleIcon.classList.remove('fa-times');
+                chatbotToggleIcon.classList.add('fa-comments');
             }
         }
 
-        sendChatBtn.addEventListener('click', sendMessage);
-        userInput.addEventListener('keypress', (e) => {
+        async function sendPopupMessage() {
+            const userMessage = chatbotUserInput.value.trim();
+            if (!userMessage) return;
+
+            // Display user message
+            const userMessageContainer = document.createElement('div');
+            userMessageContainer.className = 'flex justify-end';
+            userMessageContainer.innerHTML = `<p class="bg-indigo-500 text-white rounded-lg px-3 py-2 max-w-xs">${userMessage}</p>`;
+            chatbotMessages.appendChild(userMessageContainer);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+            chatbotUserInput.value = '';
+            chatbotLoading.classList.remove('hidden');
+            chatbotSendBtn.disabled = true;
+
+            const fullPrompt = `You are Mahak Rathi's friendly and professional AI assistant. Answer questions about Mahak's background based ONLY on the provided JSON data. Be concise. If the info isn't in the data, say "I don't have that information, but you can contact Mahak directly to ask."\n\nDATA: ${JSON.stringify(mahakResumeData)}\n\nUSER QUESTION: ${userMessage}`;
+
+            try {
+                const aiResponse = await callGeminiAPI(fullPrompt);
+                const aiMessageContainer = document.createElement('div');
+                aiMessageContainer.className = 'flex';
+                aiMessageContainer.innerHTML = `<p class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg px-3 py-2 max-w-xs"><strong>AI:</strong> ${aiResponse}</p>`;
+                chatbotMessages.appendChild(aiMessageContainer);
+            } catch (error) {
+                const errorMessageContainer = document.createElement('div');
+                errorMessageContainer.className = 'flex';
+                errorMessageContainer.innerHTML = `<p class="bg-red-100 dark:bg-red-800 text-red-700 dark:text-red-200 rounded-lg px-3 py-2 max-w-xs"><strong>AI:</strong> Sorry, I'm having trouble connecting. Please try again.</p>`;
+                chatbotMessages.appendChild(errorMessageContainer);
+            } finally {
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+                chatbotLoading.classList.add('hidden');
+                chatbotSendBtn.disabled = false;
+                chatbotUserInput.focus();
+            }
+        }
+
+        chatbotToggleBtn.addEventListener('click', toggleChatbot);
+        chatbotCloseBtn.addEventListener('click', toggleChatbot);
+        chatbotSendBtn.addEventListener('click', sendPopupMessage);
+        chatbotUserInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
-                sendMessage();
+                sendPopupMessage();
             }
         });
 
@@ -909,39 +912,27 @@
                 const projectParagraph = event.target.closest('.glass-card').querySelector('.project-description');
                 const originalDescription = projectParagraph.dataset.originalDescription;
 
-                // Toggle logic: If extended description is already shown, revert to original
                 if (projectParagraph.dataset.extended === 'true') {
                     projectParagraph.textContent = originalDescription;
                     projectParagraph.dataset.extended = 'false';
-                    event.target.textContent = '✨ Describe with AI';
-                    event.target.classList.remove('bg-gray-500', 'hover:bg-gray-600');
-                    event.target.classList.add('bg-purple-600', 'hover:bg-purple-700');
+                    event.target.innerHTML = '✨ Describe with AI';
                     return;
                 }
 
-                // Show loading indicator
                 event.target.textContent = 'Generating...';
                 event.target.disabled = true;
-                event.target.classList.add('bg-gray-500', 'cursor-not-allowed');
-                event.target.classList.remove('bg-purple-600', 'hover:bg-purple-700');
 
-
-                const prompt = `Elaborate on the project "${projectName}" by Mahak Rathi. Here is the current summary: "${projectDescription}". Explain its significance, potential impact, and technical aspects in about 2-3 sentences.`;
+                const prompt = `Elaborate on the project "${projectName}" by Mahak Rathi. Summary: "${projectDescription}". Explain its significance, potential impact, and technical aspects in 2-3 engaging sentences.`;
 
                 try {
                     const aiGeneratedDescription = await callGeminiAPI(prompt);
                     projectParagraph.textContent = aiGeneratedDescription;
-                    projectParagraph.dataset.extended = 'true'; // Mark as extended
-                    event.target.textContent = 'Collapse Description';
-                    event.target.classList.remove('bg-gray-500');
-                    event.target.classList.add('bg-indigo-700', 'hover:bg-indigo-800'); // Change button style
+                    projectParagraph.dataset.extended = 'true';
+                    event.target.textContent = 'Collapse';
                 } catch (error) {
-                    console.error("Error describing project with AI:", error);
-                    projectParagraph.textContent = originalDescription + " (Failed to generate AI description. Please try again later.)";
+                    projectParagraph.textContent = originalDescription + " (AI description failed to load.)";
                     projectParagraph.dataset.extended = 'false';
-                    event.target.textContent = '✨ Describe with AI';
-                    event.target.classList.remove('bg-gray-500', 'hover:bg-gray-600');
-                    event.target.classList.add('bg-purple-600', 'hover:bg-purple-700');
+                    event.target.innerHTML = '✨ Describe with AI';
                 } finally {
                     event.target.disabled = false;
                 }
