@@ -9,227 +9,238 @@
     <meta name="keywords" content="Mahak Rathi, portfolio, computer science, engineering, Python, C++, web development, Flask, SQL">
     <meta name="author" content="Mahak Rathi">
     <link rel="canonical" href="https://mahakrathi.github.io">
+code
+Code
+<!-- Google Fonts: Poppins for headings, Inter for body -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    :root {
+        --primary-accent: #6366f1; /* Indigo 500 */
+    }
+    body {
+        font-family: 'Inter', sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+    }
+    /* Dark Mode Styles */
+    body.dark {
+        background-color: #1a202c; /* Dark background */
+        color: #e2e8f0; /* Light text */
+    }
+    body.dark .bg-white {
+        background-color: #2d3748; /* Darker card background */
+        color: #e2e8f0;
+    }
+    body.dark .text-gray-800 {
+        color: #e2e8f0;
+    }
+    body.dark .text-gray-600 {
+        color: #a0aec0;
+    }
+    body.dark .border-gray-200 {
+        border-color: #4a5568;
+    }
+    body.dark .shadow-lg {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+    }
+    body.dark .hover\\:bg-indigo-700:hover {
+        background-color: #4338ca; /* Darker indigo on hover */
+    }
+    body.dark .skill-bar-inner {
+        background-color: var(--primary-accent);
+    }
+    body.dark .glass-card {
+         background: rgba(45, 55, 72, 0.5); /* Darker glass background */
+         backdrop-filter: blur(10px);
+         border: 1px solid rgba(74, 85, 104, 0.3);
+    }
+    .skill-bar-outer {
+        background-color: #e2e8f0;
+        border-radius: 9999px;
+        height: 8px;
+        overflow: hidden;
+    }
+    .skill-bar-inner {
+        background-color: var(--primary-accent);
+        height: 100%;
+        border-radius: 9999px;
+        width: 0%; /* Initial width for animation */
+        transition: width 1s ease-out;
+    }
+    .animate-skill-bar .skill-bar-inner {
+        width: var(--skill-level);
+    }
 
-    <!-- Google Fonts: Poppins for headings, Inter for body -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root {
-            --primary-accent: #6366f1; /* Indigo 500 */
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Poppins', sans-serif;
-        }
-        /* Dark Mode Styles */
-        body.dark {
-            background-color: #1a202c; /* Dark background */
-            color: #e2e8f0; /* Light text */
-        }
-        body.dark .bg-white {
-            background-color: #2d3748; /* Darker card background */
-            color: #e2e8f0;
-        }
-        body.dark .text-gray-800 {
-            color: #e2e8f0;
-        }
-        body.dark .text-gray-600 {
-            color: #a0aec0;
-        }
-        body.dark .border-gray-200 {
-            border-color: #4a5568;
-        }
-        body.dark .shadow-lg {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
-        }
-        body.dark .hover\\:bg-indigo-700:hover {
-            background-color: #4338ca; /* Darker indigo on hover */
-        }
-        body.dark .skill-bar-inner {
-            background-color: var(--primary-accent);
-        }
-        body.dark .glass-card {
-             background: rgba(45, 55, 72, 0.5); /* Darker glass background */
-             backdrop-filter: blur(10px);
-             border: 1px solid rgba(74, 85, 104, 0.3);
-        }
-        .skill-bar-outer {
-            background-color: #e2e8f0;
-            border-radius: 9999px;
-            height: 8px;
-            overflow: hidden;
-        }
-        .skill-bar-inner {
-            background-color: var(--primary-accent);
-            height: 100%;
-            border-radius: 9999px;
-            width: 0%; /* Initial width for animation */
-            transition: width 1s ease-out;
-        }
-        .animate-skill-bar .skill-bar-inner {
-            width: var(--skill-level);
-        }
+    /* Glassmorphism effect */
+    .glass-card {
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
 
-        /* Glassmorphism effect */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        }
-
-        /* Timeline styles */
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    /* Timeline styles */
+    .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: var(--primary-accent);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
+    .timeline-container {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
+    .timeline-container::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid var(--primary-accent);
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    .left {
+        left: 0;
+    }
+    .right {
+        left: 50%;
+    }
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid white;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent white;
+    }
+    .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    .right::after {
+        left: -16px;
+    }
+    .timeline-content {
+        padding: 20px 30px;
+        background-color: white;
+        position: relative;
+        border-radius: 6px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    body.dark .timeline-content {
+        background-color: #2d3748;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    /* Media queries for responsiveness */
+    @media screen and (max-width: 768px) {
         .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: var(--primary-accent);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
+            left: 31px;
         }
         .timeline-container {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
         }
-        .timeline-container::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            right: -17px;
-            background-color: white;
-            border: 4px solid var(--primary-accent);
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-        .left {
-            left: 0;
-        }
-        .right {
-            left: 50%;
-        }
-        .left::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            right: 30px;
-            border: medium solid white;
-            border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent white;
-        }
-        .right::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            left: 30px;
+        .timeline-container::before {
+            left: 60px;
             border: medium solid white;
             border-width: 10px 10px 10px 0;
             border-color: transparent white transparent transparent;
         }
-        .right::after {
-            left: -16px;
+        .left::after, .right::after {
+            left: 15px;
         }
-        .timeline-content {
-            padding: 20px 30px;
-            background-color: white;
-            position: relative;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .right {
+            left: 0%;
         }
-        body.dark .timeline-content {
-            background-color: #2d3748;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        }
-        /* Media queries for responsiveness */
-        @media screen and (max-width: 768px) {
-            .timeline::after {
-                left: 31px;
-            }
-            .timeline-container {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            .timeline-container::before {
-                left: 60px;
-                border: medium solid white;
-                border-width: 10px 10px 10px 0;
-                border-color: transparent white transparent transparent;
-            }
-            .left::after, .right::after {
-                left: 15px;
-            }
-            .right {
-                left: 0%;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body class="bg-gray-50 text-gray-800 transition-colors duration-300">
+code
+Code
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" class="fixed bottom-4 right-4 z-50 p-3 rounded-full bg-indigo-600 text-white shadow-lg focus:outline-none hidden transition-all duration-300 hover:scale-105">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
-
-    <!-- Scroll to Top Button -->
-    <button id="scroll-to-top" class="fixed bottom-4 right-4 z-50 p-3 rounded-full bg-indigo-600 text-white shadow-lg focus:outline-none hidden transition-all duration-300 hover:scale-105">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Navigation Bar -->
-    <nav class="bg-white dark:bg-gray-800 shadow-md p-4 sticky top-0 z-40 transition-colors duration-300">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Mahak Rathi</a>
-            <div class="flex items-center space-x-2 sm:space-x-4">
-                <div class="hidden md:flex space-x-6">
-                    <a href="#hero" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Home</a>
-                    <a href="#about" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">About</a>
-                    <a href="#skills" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Skills</a>
-                    <a href="#projects" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Projects</a>
-                    <a href="#education-experience" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Education & Experience</a>
-                    <a href="#certifications-achievements" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Certifications</a>
-                    <a href="#contact" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Contact</a>
-                </div>
-                <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 focus:outline-none transition-all duration-300 hover:scale-105">
-                    <i class="fas fa-sun text-yellow-500 text-lg dark:hidden"></i>
-                    <i class="fas fa-moon text-indigo-400 text-lg hidden dark:inline-block"></i>
-                </button>
-                <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300 text-2xl focus:outline-none">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+<!-- Navigation Bar (Simple) -->
+   <!-- Navigation Bar (Corrected) -->
+<nav class="bg-white dark:bg-gray-800 shadow-md p-4 sticky top-0 z-40 transition-colors duration-300">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Mahak Rathi</a>
+code
+Code
+<!-- Right-side Controls Container -->
+    <div class="flex items-center space-x-2 sm:space-x-4">
+        <!-- Desktop Menu Links -->
+        <div class="hidden md:flex space-x-6">
+            <a href="#hero" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Home</a>
+            <a href="#about" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">About</a>
+            <a href="#skills" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Skills</a>
+            <a href="#projects" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Projects</a>
+            <a href="#education-experience" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Education & Experience</a>
+            <a href="#certifications-achievements" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Certifications</a>
+            <a href="#contact" class="text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300">Contact</a>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-            <a href="#hero" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Home</a>
-            <a href="#about" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">About</a>
-            <a href="#skills" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Skills</a>
-            <a href="#projects" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Projects</a>
-            <a href="#education-experience" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Education & Experience</a>
-            <a href="#certifications-achievements" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Certifications</a>
-            <a href="#contact" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Contact</a>
-        </div>
-    </nav>
-    
+
+        <!-- Theme Toggle Button (MOVED HERE) -->
+        <button id="theme-toggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 focus:outline-none transition-all duration-300 hover:scale-105">
+            <i class="fas fa-sun text-yellow-500 text-lg dark:hidden"></i>
+            <i class="fas fa-moon text-indigo-400 text-lg hidden dark:inline-block"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300 text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+    <a href="#hero" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Home</a>
+    <a href="#about" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">About</a>
+    <a href="#skills" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Skills</a>
+    <a href="#projects" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Projects</a>
+    <a href="#education-experience" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Education & Experience</a>
+    <a href="#certifications-achievements" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Certifications</a>
+    <a href="#contact" class="block text-gray-600 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 p-2 rounded-md">Contact</a>
+</div>
+</nav>
     <!-- Hero Section -->
     <section id="hero" class="relative h-screen flex items-center justify-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 overflow-hidden">
         <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Background+Image');"></div>
@@ -251,694 +262,695 @@
             </div>
         </div>
     </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-        <div class="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12">
-            <div class="lg:w-1/3 flex justify-center">
-                <img src="profile.jpg" alt="Mahak Rathi" class="rounded-full shadow-xl w-64 h-64 object-cover border-4 border-indigo-500 transition-transform duration-500 transform hover:scale-105">
+code
+Code
+<!-- About Section -->
+<section id="about" class="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div class="container mx-auto px-6 lg:px-8 flex flex-col lg:flex-row items-center space-y-12 lg:space-y-0 lg:space-x-12">
+        <div class="lg:w-1/3 flex justify-center">
+            <<img src="profile.jpg" alt="Mahak Rathi" class="rounded-full shadow-xl w-64 h-64 object-cover border-4 border-indigo-500 transition-transform duration-500 transform hover:scale-105">
+        </div>
+        <div class="lg:w-2/3 text-center lg:text-left">
+            <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
+            <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                Detail-oriented Computer Science Engineering student with a strong foundation in Python, SQL, and prompt engineering. Passionate about vibe coding and building efficient, scalable solutions. Seeking an internship or entry-level role to apply technical skills, enhance software development practices, and grow through hands-on industry experience.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 dark:text-gray-300 text-left glass-card p-6">
+                <p><strong class="text-indigo-600 dark:text-indigo-400"><i class="fas fa-map-marker-alt mr-2"></i>Location:</strong> Bhopal, India</p>
+                <p><strong class="text-indigo-600 dark:text-indigo-400"><i class="fas fa-envelope mr-2"></i>Email:</strong> mahakrathi706@gmail.com</p>
+                <p><strong class="text-indigo-600 dark:text-indigo-400"><i class="fas fa-phone-alt mr-2"></i>Phone:</strong> +91-7067534531</p>
+                <p><strong class="text-indigo-600 dark:text-indigo-400"><i class="fab fa-github mr-2"></i>GitHub:</strong> <a href="https://github.com/mahakrathi" target="_blank" class="hover:underline">github.com/mahakrathi</a></p>
+                <p><strong class="text-indigo-600 dark:text-indigo-400"><i class="fab fa-linkedin mr-2"></i>LinkedIn:</strong> <a href="https://linkedin.com/in/mahakrathi" target="_blank" class="hover:underline">linkedin.com/in/mahakrathi</a></p>
             </div>
-            <div class="lg:w-2/3 text-center lg:text-left">
-                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">About Me</h2>
-                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                    Detail-oriented Computer Science Engineering student with a strong foundation in Python, SQL, and prompt engineering. Passionate about vibe coding and building efficient, scalable solutions. Seeking an internship or entry-level role to apply technical skills, enhance software development practices, and grow through hands-on industry experience.
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
+    <div class="container mx-auto px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Technical Skills</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Skill Category: Programming -->
+            <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-code mr-3"></i>Programming</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">Python</p>
+                        <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 90%;"></div></div>
+                    </li>
+                    <li>
+                        <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">C++</p>
+                        <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 85%;"></div></div>
+                    </li>
+                    <li>
+                        <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">SQL</p>
+                        <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 80%;"></div></div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Skill Category: Frontend -->
+            <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-desktop mr-3"></i>Frontend</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">HTML5</p>
+                        <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 95%;"></div></div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Skill Category: Backend & Databases -->
+            <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-server mr-3"></i>Backend & Databases</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">MySQL</p>
+                        <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 90%;"></div></div>
+                    </li>
+                    <li>
+                        <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">SQLite</p>
+                        <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 85%;"></div></div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Skill Category: Tools & Concepts -->
+            <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-toolbox mr-3"></i>Tools & Concepts</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">Git / GitHub</p>
+                        <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 90%;"></div></div>
+                    </li>
+                    <li>
+                        <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">VS Code</p>
+                        <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 85%;"></div></div>
+                    </li>
+                    <li>
+                        <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">OOP</p>
+                        <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 80%;"></div></div>
+                    </li>
+                    <li>
+                        <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">DBMS</p>
+                        <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 85%;"></div></div>
+                    </li>
+                    <li>
+                        <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">Salesforce Fundamentals</p>
+                        <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 75%;"></div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div class="container mx-auto px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">My Projects</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1: MEDBED -->
+            <div class="glass-card p-6 shadow-lg flex flex-col transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">MEDBED: Hospital Bed Management System</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow project-description" data-original-description="Developed a web-based system for real-time hospital bed tracking with role-based user access. Integrated responsive UI and feedback module to enhance user experience.">
+                    Developed a web-based system for real-time hospital bed tracking with role-based user access. Integrated responsive UI and feedback module to enhance user experience.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700 dark:text-gray-300 text-left glass-card p-6">
-                    <p><strong class="text-indigo-600 dark:text-indigo-400"><i class="fas fa-map-marker-alt mr-2"></i>Location:</strong> Bhopal, India</p>
-                    <p><strong class="text-indigo-600 dark:text-indigo-400"><i class="fas fa-envelope mr-2"></i>Email:</strong> mahakrathi706@gmail.com</p>
-                    <p><strong class="text-indigo-600 dark:text-indigo-400"><i class="fas fa-phone-alt mr-2"></i>Phone:</strong> +91-7067534531</p>
-                    <p><strong class="text-indigo-600 dark:text-indigo-400"><i class="fab fa-github mr-2"></i>GitHub:</strong> <a href="https://github.com/mahakrathi" target="_blank" class="hover:underline">github.com/mahakrathi</a></p>
-                    <p><strong class="text-indigo-600 dark:text-indigo-400"><i class="fab fa-linkedin mr-2"></i>LinkedIn:</strong> <a href="https://linkedin.com/in/mahakrathi" target="_blank" class="hover:underline">linkedin.com/in/mahakrathi</a></p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    <strong class="text-indigo-600 dark:text-indigo-400">Tech:</strong> HTML, CSS, Bootstrap, MySQL
+                </p>
+                <div class="flex flex-wrap gap-3 mt-auto">
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-300 text-sm">
+                        <i class="fab fa-github mr-2"></i>GitHub
+                    </button>
+                    <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors duration-300 text-sm">
+                        <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                    </button>
+                    <button class="describe-project-btn bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors duration-300 text-sm"
+                            data-project-name="MEDBED: Hospital Bed Management System"
+                            data-project-description="Developed a web-based system for real-time hospital bed tracking with role-based user access. Integrated responsive UI and feedback module to enhance user experience. Technologies: HTML, CSS, Bootstrap, MySQL.">
+                        ✨ Describe with AI
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
-        <div class="container mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Technical Skills</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Skill Category: Programming -->
-                <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-code mr-3"></i>Programming</h3>
-                    <ul class="space-y-4">
-                        <li>
-                            <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">Python</p>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 90%;"></div></div>
-                        </li>
-                        <li>
-                            <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">C++</p>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 85%;"></div></div>
-                        </li>
-                        <li>
-                            <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">SQL</p>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 80%;"></div></div>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Skill Category: Frontend -->
-                <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-desktop mr-3"></i>Frontend</h3>
-                    <ul class="space-y-4">
-                        <li>
-                            <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">HTML5</p>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 95%;"></div></div>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Skill Category: Backend & Databases -->
-                <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-server mr-3"></i>Backend & Databases</h3>
-                    <ul class="space-y-4">
-                        <li>
-                            <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">MySQL</p>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 90%;"></div></div>
-                        </li>
-                        <li>
-                            <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">SQLite</p>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 85%;"></div></div>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Skill Category: Tools & Concepts -->
-                <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-toolbox mr-3"></i>Tools & Concepts</h3>
-                    <ul class="space-y-4">
-                        <li>
-                            <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">Git / GitHub</p>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 90%;"></div></div>
-                        </li>
-                        <li>
-                            <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">VS Code</p>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 85%;"></div></div>
-                        </li>
-                        <li>
-                            <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">OOP</p>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 80%;"></div></div>
-                        </li>
-                        <li>
-                            <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">DBMS</p>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 85%;"></div></div>
-                        </li>
-                        <li>
-                            <p class="font-medium text-gray-700 dark:text-gray-300 mb-2">Salesforce Fundamentals</p>
-                            <div class="skill-bar-outer"><div class="skill-bar-inner" style="--skill-level: 75%;"></div></div>
-                        </li>
-                    </ul>
+            <!-- Project 2: Smart Customer Support Dashboard -->
+            <div class="glass-card p-6 shadow-lg flex flex-col transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Smart Customer Support Dashboard</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow project-description" data-original-description="Built an interactive dashboard for customer support analytics using Salesforce API. Implemented backend data processing for improved response efficiency.">
+                    Built an interactive dashboard for customer support analytics using Salesforce API. Implemented backend data processing for improved response efficiency.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    <strong class="text-indigo-600 dark:text-indigo-400">Tech:</strong> Python, Flask, SQLite
+                </p>
+                <div class="flex flex-wrap gap-3 mt-auto">
+                    <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-300 text-sm">
+                        <i class="fab fa-github mr-2"></i>GitHub
+                    </button>
+                    <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors duration-300 text-sm">
+                        <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                    </button>
+                    <button class="describe-project-btn bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors duration-300 text-sm"
+                            data-project-name="Smart Customer Support Dashboard"
+                            data-project-description="Built an interactive dashboard for customer support analytics using Salesforce API. Implemented backend data processing for improved response efficiency. Technologies: Python, Flask, SQLite.">
+                        ✨ Describe with AI
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-        <div class="container mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">My Projects</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1: MEDBED -->
-                <div class="glass-card p-6 shadow-lg flex flex-col transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">MEDBED: Hospital Bed Management System</h3>
-                    <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow project-description" data-original-description="Developed a web-based system for real-time hospital bed tracking with role-based user access. Integrated responsive UI and feedback module to enhance user experience.">
-                        Developed a web-based system for real-time hospital bed tracking with role-based user access. Integrated responsive UI and feedback module to enhance user experience.
-                    </p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                        <strong class="text-indigo-600 dark:text-indigo-400">Tech:</strong> HTML, CSS, Bootstrap, MySQL
-                    </p>
-                    <div class="flex flex-wrap gap-3 mt-auto">
-                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-300 text-sm">
-                            <i class="fab fa-github mr-2"></i>GitHub
-                        </button>
-                        <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors duration-300 text-sm">
-                            <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-                        </button>
-                        <button class="describe-project-btn bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors duration-300 text-sm"
-                                data-project-name="MEDBED: Hospital Bed Management System"
-                                data-project-description="Developed a web-based system for real-time hospital bed tracking with role-based user access. Integrated responsive UI and feedback module to enhance user experience. Technologies: HTML, CSS, Bootstrap, MySQL.">
-                            ✨ Describe with AI
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Project 2: Smart Customer Support Dashboard -->
-                <div class="glass-card p-6 shadow-lg flex flex-col transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Smart Customer Support Dashboard</h3>
-                    <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow project-description" data-original-description="Built an interactive dashboard for customer support analytics using Salesforce API. Implemented backend data processing for improved response efficiency.">
-                        Built an interactive dashboard for customer support analytics using Salesforce API. Implemented backend data processing for improved response efficiency.
-                    </p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                        <strong class="text-indigo-600 dark:text-indigo-400">Tech:</strong> Python, Flask, SQLite
-                    </p>
-                    <div class="flex flex-wrap gap-3 mt-auto">
-                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors duration-300 text-sm">
-                            <i class="fab fa-github mr-2"></i>GitHub
-                        </button>
-                        <button class="bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors duration-300 text-sm">
-                            <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-                        </button>
-                        <button class="describe-project-btn bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors duration-300 text-sm"
-                                data-project-name="Smart Customer Support Dashboard"
-                                data-project-description="Built an interactive dashboard for customer support analytics using Salesforce API. Implemented backend data processing for improved response efficiency. Technologies: Python, Flask, SQLite.">
-                            ✨ Describe with AI
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Placeholder Project 3 -->
-                <div class="glass-card p-6 shadow-lg flex flex-col transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Placeholder Project (Your Next Big Thing!)</h3>
-                    <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow project-description" data-original-description="This spot is reserved for your next exciting project! Whether it's a web app, a machine learning model, or something entirely new, showcase it here.">
-                        This spot is reserved for your next exciting project! Whether it's a web app, a machine learning model, or something entirely new, showcase it here.
-                    </p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                        <strong class="text-indigo-600 dark:text-indigo-400">Tech:</strong> Coming Soon!
-                    </p>
-                    <div class="flex flex-wrap gap-3 mt-auto">
-                        <button class="bg-gray-400 text-gray-700 px-4 py-2 rounded-md cursor-not-allowed text-sm" disabled>
-                            <i class="fab fa-github mr-2"></i>GitHub
-                        </button>
-                        <button class="bg-gray-400 text-gray-700 px-4 py-2 rounded-md cursor-not-allowed text-sm" disabled>
-                            <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-                        </button>
-                        <button class="describe-project-btn bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors duration-300 text-sm"
-                                data-project-name="Placeholder Project"
-                                data-project-description="This spot is reserved for your next exciting project! Whether it's a web app, a machine learning model, or something entirely new, showcase it here. Technologies: Coming Soon!">
-                            ✨ Describe with AI
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education & Experience Timeline Section -->
-    <section id="education-experience" class="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
-        <div class="container mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Education & Volunteering</h2>
-
-            <div class="timeline">
-                <!-- Education: B.Tech -->
-                <div class="timeline-container left">
-                    <div class="timeline-content glass-card dark:bg-gray-700">
-                        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">B.Tech in Computer Science & Engineering</h3>
-                        <p class="text-gray-700 dark:text-gray-300 text-md">Jai Narain College of Technology (LNCT Group), Bhopal</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">2022-2026 | CGPA: 8.08</p>
-                        <p class="text-gray-700 dark:text-gray-300 text-sm">Focused on core computer science concepts, software development, and problem-solving.</p>
-                    </div>
-                </div>
-                <!-- Education: 12th -->
-                <div class="timeline-container right">
-                    <div class="timeline-content glass-card dark:bg-gray-700">
-                        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Higher Secondary (12th)</h3>
-                        <p class="text-gray-700 dark:text-gray-300 text-md">Beersheba International School</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">2022 | CGPA: 8.80</p>
-                        <p class="text-gray-700 dark:text-gray-300 text-sm">Completed secondary education with strong academic performance.</p>
-                    </div>
-                </div>
-                <!-- Education: 10th -->
-                <div class="timeline-container left">
-                    <div class="timeline-content glass-card dark:bg-gray-700">
-                        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Secondary (10th)</h3>
-                        <p class="text-gray-700 dark:text-gray-300 text-md">Beersheba International School</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">2020 | CGPA: 8.50</p>
-                        <p class="text-gray-700 dark:text-gray-300 text-sm">Foundation building in various subjects.</p>
-                    </div>
-                </div>
-                <!-- Volunteering: GDG -->
-                <div class="timeline-container right">
-                    <div class="timeline-content glass-card dark:bg-gray-700">
-                        <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Google Developer Group (GDG) Volunteer</h3>
-                        <p class="text-gray-700 dark:text-gray-300 text-md">Community Engagement</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Jan 2023 - Present</p>
-                        <p class="text-gray-700 dark:text-gray-300 text-sm">Assisted in organizing DevFest, workshops, and community engagement activities.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications & Achievements Section -->
-    <section id="certifications-achievements" class="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-        <div class="container mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Certifications & Achievements</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Certifications -->
-                <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 col-span-1 md:col-span-2 lg:col-span-1">
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-award mr-3"></i>Certifications</h3>
-                    <ul class="space-y-4 text-gray-700 dark:text-gray-300">
-                        <li>
-                            <p class="font-medium">Salesforce Developer with Agentblazer Champion Program</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">SmartBridge, AICTE, Salesforce (May 2025 - July 2025)</p>
-                            <p class="text-sm">Completed 8-week virtual internship covering Salesforce Fundamentals, Apex Specialist, Object Relationships, LWC Basics, and Agentblazer Champion tasks.</p>
-                        </li>
-                        <li>
-                            <p class="font-medium">C++ Programming</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Apna College</p>
-                        </li>
-                        <li>
-                            <p class="font-medium">Cloud Gen AI</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Google</p>
-                        </li>
-                        <li>
-                            <p class="font-medium">DBMS, Python Fundamentals</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Infosys Springboard</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Achievements -->
-                <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 col-span-1 md:col-span-2 lg:col-span-2">
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-trophy mr-3"></i>Achievements</h3>
-                    <ul class="space-y-4 text-gray-700 dark:text-gray-300">
-                        <li>
-                            <p class="font-medium">Scored 85.8% in CoCubes Assessment</p>
-                        </li>
-                        <li>
-                            <p class="font-medium">Secured 81.95% in TCS NQT</p>
-                        </li>
-                        <li>
-                            <p class="font-medium">Google Developer Group (GDG) Volunteer - Jan 2023-Present</p>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">Assisted in organizing DevFest, workshops, and community engagement activities.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-        <div class="container mx-auto px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Get in Touch</h2>
-
-            <div class="flex flex-col lg:flex-row items-start lg:space-x-12 space-y-12 lg:space-y-0">
-                <!-- Contact Form -->
-                <div class="lg:w-2/3 glass-card p-8 shadow-lg w-full">
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">Send Me a Message</h3>
-                    <form action="#" method="POST" class="space-y-6" onsubmit="event.preventDefault(); alert('This form is a placeholder. You would integrate a service like EmailJS or a backend API here.');">
-                        <div>
-                            <label for="name" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Name</label>
-                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white dark:border-gray-600" placeholder="Your Name" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white dark:border-gray-600" placeholder="your@example.com" required>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Message</label>
-                            <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white dark:border-gray-600" placeholder="Your message..." required></textarea>
-                        </div>
-                        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105">
-                            Send Message <i class="fas fa-paper-plane ml-2"></i>
-                        </button>
-                    </form>
-                </div>
-
-                <!-- Contact Details & Socials -->
-                <div class="lg:w-1/3 glass-card p-8 shadow-lg w-full">
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">Contact Info</h3>
-                    <div class="space-y-4 text-gray-700 dark:text-gray-300">
-                        <p class="flex items-center"><i class="fas fa-map-marker-alt text-indigo-600 dark:text-indigo-400 mr-3 text-lg"></i>Bhopal, India</p>
-                        <p class="flex items-center"><i class="fas fa-envelope text-indigo-600 dark:text-indigo-400 mr-3 text-lg"></i>mahakrathi706@gmail.com</p>
-                        <p class="flex items-center"><i class="fas fa-phone-alt text-indigo-600 dark:text-indigo-400 mr-3 text-lg"></i>+91-7067534531</p>
-                    </div>
-
-                    <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mt-8 mb-4">Connect with Me</h3>
-                    <div class="flex space-x-6 text-2xl">
-                        <a href="https://linkedin.com/in/mahakrathi" target="_blank" class="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/mahakrathi" target="_blank" class="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-github"></i></a>
-                        <a href="https://wa.me/917067534531?text=Hello%20Mahak," target="_blank" class="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 dark:bg-gray-900 text-white py-8 transition-colors duration-300">
-        <div class="container mx-auto px-6 lg:px-8 text-center">
-            <div class="flex justify-center space-x-6 mb-6 text-3xl">
-                <a href="https://linkedin.com/in/mahakrathi" target="_blank" class="hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/mahakrathi" target="_blank" class="hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-github"></i></a>
-                <a href="https://wa.me/917067534531?text=Hello%20Mahak," target="_blank" class="hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:mahakrathi706@gmail.com" class="hover:text-indigo-400 transition-colors duration-300"><i class="fas fa-envelope"></i></a>
-            </div>
-            <p class="text-gray-400 text-sm">&copy; 2025 Mahak Rathi. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- AI Chatbot Popup -->
-    <div id="chatbot-popup" class="fixed bottom-4 left-4 z-50 flex flex-col items-start">
-        <!-- Chat Window (hidden by default) -->
-        <div id="chatbot-window-container" class="hidden mb-2 w-80 sm:w-96 h-[500px] bg-white dark:bg-gray-800 rounded-lg shadow-2xl flex flex-col transition-all duration-300 transform origin-bottom-left scale-95 opacity-0">
-            <!-- Header -->
-            <div class="flex justify-between items-center p-4 bg-indigo-600 text-white rounded-t-lg">
-                <h3 class="font-semibold text-lg">AI Assistant</h3>
-                <button id="chatbot-close-btn" class="text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
-            </div>
-            <!-- Messages -->
-            <div id="chatbot-messages" class="flex-grow p-4 overflow-y-auto text-sm space-y-4">
-                <div class="flex">
-                    <p class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg px-3 py-2 max-w-xs">
-                        <strong>AI:</strong> Hello! I'm Mahak's AI assistant. Ask me anything about her skills, projects, or experience!
-                    </p>
-                </div>
-            </div>
-            <!-- Loading Indicator -->
-            <div id="chatbot-loading" class="hidden px-4 pb-2 text-indigo-600 dark:text-indigo-400 flex items-center">
-                <i class="fas fa-spinner fa-spin mr-2"></i> Typing...
-            </div>
-            <!-- Input -->
-            <div class="p-2 border-t border-gray-200 dark:border-gray-700">
-                <div class="flex items-center">
-                    <input type="text" id="chatbot-user-input" class="flex-grow shadow-inner appearance-none border rounded-l-lg w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-600 dark:text-white dark:border-gray-500" placeholder="Ask a question...">
-                    <button id="chatbot-send-btn" class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg font-semibold hover:bg-indigo-700 transition-colors duration-300 ml-[-1px]">
-                        <i class="fas fa-paper-plane"></i>
+            <!-- Placeholder Project 3 -->
+            <div class="glass-card p-6 shadow-lg flex flex-col transform hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-3">Placeholder Project (Your Next Big Thing!)</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow project-description" data-original-description="This spot is reserved for your next exciting project! Whether it's a web app, a machine learning model, or something entirely new, showcase it here.">
+                    This spot is reserved for your next exciting project! Whether it's a web app, a machine learning model, or something entirely new, showcase it here.
+                </p>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    <strong class="text-indigo-600 dark:text-indigo-400">Tech:</strong> Coming Soon!
+                </p>
+                <div class="flex flex-wrap gap-3 mt-auto">
+                    <button class="bg-gray-400 text-gray-700 px-4 py-2 rounded-md cursor-not-allowed text-sm" disabled>
+                        <i class="fab fa-github mr-2"></i>GitHub
+                    </button>
+                    <button class="bg-gray-400 text-gray-700 px-4 py-2 rounded-md cursor-not-allowed text-sm" disabled>
+                        <i class="fas fa-external-link-alt mr-2"></i>Live Demo
+                    </button>
+                    <button class="describe-project-btn bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors duration-300 text-sm"
+                            data-project-name="Placeholder Project"
+                            data-project-description="This spot is reserved for your next exciting project! Whether it's a web app, a machine learning model, or something entirely new, showcase it here. Technologies: Coming Soon!">
+                        ✨ Describe with AI
                     </button>
                 </div>
             </div>
         </div>
-        <!-- Toggle Button -->
-        <button id="chatbot-toggle-btn" class="p-4 rounded-full bg-indigo-600 text-white shadow-lg focus:outline-none transition-all duration-300 hover:bg-indigo-700 hover:scale-110">
-            <i id="chatbot-toggle-icon" class="fas fa-comments text-2xl"></i>
-        </button>
     </div>
+</section>
 
+<!-- Education & Experience Timeline Section -->
+<section id="education-experience" class="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
+    <div class="container mx-auto px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Education & Volunteering</h2>
 
-    <script>
-        // Resume Data (for AI Assistant and Project Description)
-        const mahakResumeData = {
-            professionalSummary: "Detail-oriented Computer Science Engineering student with a strong foundation in Python, SQL, and prompt engineering. Passionate about vibe coding and building efficient, scalable solutions. Seeking an internship or entry-level role to apply technical skills, enhance software development practices, and grow through hands-on industry experience.",
-            education: [
-                { title: "B.Tech in Computer Science & Engineering", institution: "Jai Narain College of Technology (LNCT Group), Bhopal", years: "2022-2026", cgpa: "8.08" },
-                { title: "Higher Secondary (12th)", institution: "Beersheba International School", years: "2020", cgpa: "8.80" },
-                { title: "Secondary (10th)", institution: "Beersheba International School", years: "2018", cgpa: "8.50" }
-            ],
-            technicalSkills: {
-                programming: ["Python", "C++", "SQL"],
-                frontend: ["HTML5", "CSS3", "Bootstrap", "jQuery"],
-                backend: ["Flask", "REST APIs"],
-                databases: ["MySQL", "SQLite"],
-                tools: ["Git", "GitHub", "VS Code"],
-                concepts: ["OOP", "DBMS", "Salesforce Fundamentals"]
-            },
-            projects: [
-                { name: "MEDBED: Hospital Bed Management System", description: "Developed a web-based system for real-time hospital bed tracking with role-based user access. Integrated responsive UI and feedback module to enhance user experience.", tech: "HTML, CSS, Bootstrap, MySQL" },
-                { name: "Smart Customer Support Dashboard", description: "Built an interactive dashboard for customer support analytics using Salesforce API. Implemented backend data processing for improved response efficiency.", tech: "Python, Flask, SQLite" }
-            ],
-            certifications: [
-                { name: "Salesforce Developer with Agentblazer Champion Program", issuer: "SmartBridge, AICTE, Salesforce", period: "May 2025 - July 2025", details: "Completed 8-week virtual internship covering Salesforce Fundamentals, Apex Specialist, Object Relationships, LWC Basics, and Agentblazer Champion tasks" },
-                { name: "C++ Programming", issuer: "Apna College" },
-                { name: "Cloud Gen AI", issuer: "Google" },
-                { name: "DBMS, Python Fundamentals", issuer: "Infosys Springboard" }
-            ],
-            achievements: [
-                "Scored 85.8% in CoCubes Assessment",
-                "Secured 81.95% in TCS NQT",
-                "Google Developer Group (GDG) Volunteer - Jan 2023-Present: Assisted in organizing DevFest, workshops, and community engagement activities."
-            ],
-            contact: {
-                location: "Bhopal, India",
-                email: "mahakrathi706@gmail.com",
-                phone: "+91-7067534531",
-                linkedin: "linkedin.com/in/mahakrathi",
-                github: "github.com/mahakrathi",
-                portfolio: "mahakrathi.github.io"
-            }
-        };
+        <div class="timeline">
+            <!-- Education: B.Tech -->
+            <div class="timeline-container left">
+                <div class="timeline-content glass-card dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">B.Tech in Computer Science & Engineering</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-md">Jai Narain College of Technology (LNCT Group), Bhopal</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">2022-2026 | CGPA: 8.08</p>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm">Focused on core computer science concepts, software development, and problem-solving.</p>
+                </div>
+            </div>
+            <!-- Education: 12th -->
+            <div class="timeline-container right">
+                <div class="timeline-content glass-card dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Higher Secondary (12th)</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-md">Beersheba International School</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">2022 | CGPA: 8.80</p>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm">Completed secondary education with strong academic performance.</p>
+                </div>
+            </div>
+            <!-- Education: 10th -->
+            <div class="timeline-container left">
+                <div class="timeline-content glass-card dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Secondary (10th)</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-md">Beersheba International School</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">2020 | CGPA: 8.50</p>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm">Foundation building in various subjects.</p>
+                </div>
+            </div>
+            <!-- Volunteering: GDG -->
+            <div class="timeline-container right">
+                <div class="timeline-content glass-card dark:bg-gray-700">
+                    <h3 class="text-xl font-semibold text-indigo-600 dark:text-indigo-400">Google Developer Group (GDG) Volunteer</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-md">Community Engagement</p>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-2">Jan 2023 - Present</p>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm">Assisted in organizing DevFest, workshops, and community engagement activities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+<!-- Certifications & Achievements Section -->
+<section id="certifications-achievements" class="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div class="container mx-auto px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Certifications & Achievements</h2>
 
-        // Dark/Light Mode Toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Certifications -->
+            <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 col-span-1 md:col-span-2 lg:col-span-1">
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-award mr-3"></i>Certifications</h3>
+                <ul class="space-y-4 text-gray-700 dark:text-gray-300">
+                    <li>
+                        <p class="font-medium">Salesforce Developer with Agentblazer Champion Program</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">SmartBridge, AICTE, Salesforce (May 2025 - July 2025)</p>
+                        <p class="text-sm">Completed 8-week virtual internship covering Salesforce Fundamentals, Apex Specialist, Object Relationships, LWC Basics, and Agentblazer Champion tasks.</p>
+                    </li>
+                    <li>
+                        <p class="font-medium">C++ Programming</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Apna College</p>
+                    </li>
+                    <li>
+                        <p class="font-medium">Cloud Gen AI</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Google</p>
+                    </li>
+                    <li>
+                        <p class="font-medium">DBMS, Python Fundamentals</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Infosys Springboard</p>
+                    </li>
+                </ul>
+            </div>
 
-        function setTheme(theme) {
-            if (theme === 'dark') {
-                body.classList.add('dark');
-            } else {
-                body.classList.remove('dark');
-            }
-            localStorage.setItem('theme', theme);
+            <!-- Achievements -->
+            <div class="glass-card p-6 shadow-lg transform hover:scale-105 transition-transform duration-300 col-span-1 md:col-span-2 lg:col-span-2">
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-4 flex items-center"><i class="fas fa-trophy mr-3"></i>Achievements</h3>
+                <ul class="space-y-4 text-gray-700 dark:text-gray-300">
+                    <li>
+                        <p class="font-medium">Scored 85.8% in CoCubes Assessment</p>
+                    </li>
+                    <li>
+                        <p class="font-medium">Secured 81.95% in TCS NQT</p>
+                    </li>
+                    <li>
+                        <p class="font-medium">Google Developer Group (GDG) Volunteer - Jan 2023-Present</p>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Assisted in organizing DevFest, workshops, and community engagement activities.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AI Assistant Chat Widget -->
+<section id="ai-chat" class="py-16 bg-white dark:bg-gray-800 transition-colors duration-300">
+    <div class="container mx-auto px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">Talk to my AI Assistant!</h2>
+        <div class="glass-card mx-auto p-8 max-w-lg shadow-lg flex flex-col h-[500px]">
+            <div id="chat-window" class="flex-grow bg-gray-100 dark:bg-gray-700 p-4 rounded-lg overflow-y-auto text-left mb-4 shadow-inner">
+                <p class="text-gray-600 dark:text-gray-300 mb-2"><strong>AI Assistant:</strong> Hello! I'm Mahak's AI assistant. Ask me anything about her skills, projects, education, or experience!</p>
+            </div>
+            <div class="flex items-center">
+                <input type="text" id="user-input" class="flex-grow shadow appearance-none border rounded-l-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-600 dark:text-white dark:border-gray-500" placeholder="Ask me a question...">
+                <button id="send-chat-btn" class="bg-indigo-600 text-white px-6 py-3 rounded-r-lg font-semibold hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105 ml-[-1px]">
+                    <i class="fas fa-paper-plane mr-2"></i>Send ✨
+                </button>
+                <div id="chat-loading" class="hidden ml-4 text-indigo-600 dark:text-indigo-400">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div class="container mx-auto px-6 lg:px-8">
+        <h2 class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">Get in Touch</h2>
+
+        <div class="flex flex-col lg:flex-row items-start lg:space-x-12 space-y-12 lg:space-y-0">
+            <!-- Contact Form -->
+            <div class="lg:w-2/3 glass-card p-8 shadow-lg w-full">
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">Send Me a Message</h3>
+                <form action="#" method="POST" class="space-y-6" onsubmit="event.preventDefault(); alert('This form is a placeholder. You would integrate a service like EmailJS or a backend API here.');">
+                    <div>
+                        <label for="name" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white dark:border-gray-600" placeholder="Your Name" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white dark:border-gray-600" placeholder="your@example.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="6" class="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-700 dark:text-white dark:border-gray-600" placeholder="Your message..." required></textarea>
+                    </div>
+                    <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-700 transition-colors duration-300 transform hover:scale-105">
+                        Send Message <i class="fas fa-paper-plane ml-2"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Details & Socials -->
+            <div class="lg:w-1/3 glass-card p-8 shadow-lg w-full">
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">Contact Info</h3>
+                <div class="space-y-4 text-gray-700 dark:text-gray-300">
+                    <p class="flex items-center"><i class="fas fa-map-marker-alt text-indigo-600 dark:text-indigo-400 mr-3 text-lg"></i>Bhopal, India</p>
+                    <p class="flex items-center"><i class="fas fa-envelope text-indigo-600 dark:text-indigo-400 mr-3 text-lg"></i>mahakrathi706@gmail.com</p>
+                    <p class="flex items-center"><i class="fas fa-phone-alt text-indigo-600 dark:text-indigo-400 mr-3 text-lg"></i>+91-7067534531</p>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-indigo-600 dark:text-indigo-400 mt-8 mb-4">Connect with Me</h3>
+                <div class="flex space-x-6 text-2xl">
+                    <a href="https://linkedin.com/in/mahakrathi" target="_blank" class="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/mahakrathi" target="_blank" class="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/917067534531?text=Hello%20Mahak," target="_blank" class="text-gray-700 hover:text-indigo-600 dark:text-gray-300 dark:hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-800 dark:bg-gray-900 text-white py-8 transition-colors duration-300">
+    <div class="container mx-auto px-6 lg:px-8 text-center">
+        <div class="flex justify-center space-x-6 mb-6 text-3xl">
+            <a href="https://linkedin.com/in/mahakrathi" target="_blank" class="hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/mahakrathi" target="_blank" class="hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-github"></i></a>
+            <a href="https://wa.me/917067534531?text=Hello%20Mahak," target="_blank" class="hover:text-indigo-400 transition-colors duration-300"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:mahakrathi706@gmail.com" class="hover:text-indigo-400 transition-colors duration-300"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="text-gray-400 text-sm">&copy; 2025 Mahak Rathi. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    // Resume Data (for AI Assistant and Project Description)
+    const mahakResumeData = {
+        professionalSummary: "Detail-oriented Computer Science Engineering student with a strong foundation in Python, SQL, and prompt engineering. Passionate about vibe coding and building efficient, scalable solutions. Seeking an internship or entry-level role to apply technical skills, enhance software development practices, and grow through hands-on industry experience.",
+        education: [
+            { title: "B.Tech in Computer Science & Engineering", institution: "Jai Narain College of Technology (LNCT Group), Bhopal", years: "2022-2026", cgpa: "8.08" },
+            { title: "Higher Secondary (12th)", institution: "Beersheba International School", years: "2020", cgpa: "8.80" },
+            { title: "Secondary (10th)", institution: "Beersheba International School", years: "2018", cgpa: "8.50" }
+        ],
+        technicalSkills: {
+            programming: ["Python", "C++", "SQL"],
+            frontend: ["HTML5", "CSS3", "Bootstrap", "jQuery"],
+            backend: ["Flask", "REST APIs"],
+            databases: ["MySQL", "SQLite"],
+            tools: ["Git", "GitHub", "VS Code"],
+            concepts: ["OOP", "DBMS", "Salesforce Fundamentals"]
+        },
+        projects: [
+            { name: "MEDBED: Hospital Bed Management System", description: "Developed a web-based system for real-time hospital bed tracking with role-based user access. Integrated responsive UI and feedback module to enhance user experience.", tech: "HTML, CSS, Bootstrap, MySQL" },
+            { name: "Smart Customer Support Dashboard", description: "Built an interactive dashboard for customer support analytics using Salesforce API. Implemented backend data processing for improved response efficiency.", tech: "Python, Flask, SQLite" }
+        ],
+        certifications: [
+            { name: "Salesforce Developer with Agentblazer Champion Program", issuer: "SmartBridge, AICTE, Salesforce", period: "May 2025 - July 2025", details: "Completed 8-week virtual internship covering Salesforce Fundamentals, Apex Specialist, Object Relationships, LWC Basics, and Agentblazer Champion tasks" },
+            { name: "C++ Programming", issuer: "Apna College" },
+            { name: "Cloud Gen AI", issuer: "Google" },
+            { name: "DBMS, Python Fundamentals", issuer: "Infosys Springboard" }
+        ],
+        achievements: [
+            "Scored 85.8% in CoCubes Assessment",
+            "Secured 81.95% in TCS NQT",
+            "Google Developer Group (GDG) Volunteer - Jan 2023-Present: Assisted in organizing DevFest, workshops, and community engagement activities."
+        ],
+        contact: {
+            location: "Bhopal, India",
+            email: "mahakrathi706@gmail.com",
+            phone: "+91-7067534531",
+            linkedin: "linkedin.com/in/mahakrathi",
+            github: "github.com/mahakrathi",
+            portfolio: "mahakrathi.github.io"
         }
+    };
 
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            setTheme(savedTheme);
-        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setTheme('dark');
-        } else {
-            setTheme('light');
-        }
-
-        themeToggle.addEventListener('click', () => {
-            if (body.classList.contains('dark')) {
-                setTheme('light');
-            } else {
-                setTheme('dark');
-            }
-        });
-
-        // Typing Effect for Hero Section
-        const taglineTextElement = document.getElementById('tagline-text');
-        const taglines = [
-            "Crafting efficient and scalable solutions.",
-            "Eager to learn and grow in the tech industry."
-        ];
-        let taglineIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typingSpeed = 100;
-        let deletingSpeed = 50;
-        let delayBeforeTypingNext = 1500;
-
-        function typeEffect() {
-            const currentTagline = taglines[taglineIndex];
-            if (!isDeleting) {
-                taglineTextElement.textContent = currentTagline.substring(0, charIndex + 1);
-                charIndex++;
-                if (charIndex === currentTagline.length) {
-                    isDeleting = true;
-                    setTimeout(typeEffect, delayBeforeTypingNext);
-                } else {
-                    setTimeout(typeEffect, typingSpeed);
-                }
-            } else {
-                taglineTextElement.textContent = currentTagline.substring(0, charIndex - 1);
-                charIndex--;
-                if (charIndex === 0) {
-                    isDeleting = false;
-                    taglineIndex = (taglineIndex + 1) % taglines.length;
-                    setTimeout(typeEffect, typingSpeed);
-                } else {
-                    setTimeout(typeEffect, deletingSpeed);
-                }
-            }
-        }
-        document.addEventListener('DOMContentLoaded', typeEffect);
-
-        // Scroll to Top Button Visibility
-        const scrollToTopBtn = document.getElementById('scroll-to-top');
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                scrollToTopBtn.classList.remove('hidden');
-            } else {
-                scrollToTopBtn.classList.add('hidden');
-            }
-        };
-
-        scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
         });
+    });
 
-        // Skill Bar Animation on Scroll
-        function animateSkillBars() {
-            const skillSections = document.querySelectorAll('#skills .glass-card');
-            skillSections.forEach(section => {
-                const rect = section.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    section.classList.add('animate-skill-bar');
-                } else {
-                    section.classList.remove('animate-skill-bar');
-                }
-            });
+    // Dark/Light Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Function to set theme
+    function setTheme(theme) {
+        if (theme === 'dark') {
+            body.classList.add('dark');
+        } else {
+            body.classList.remove('dark');
         }
+        localStorage.setItem('theme', theme); // Persist theme across sessions
+    }
 
-        window.addEventListener('scroll', animateSkillBars);
-        window.addEventListener('load', animateSkillBars);
+    // Check for saved theme preference or system preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setTheme('dark');
+    } else {
+        setTheme('light'); // Default to light if no preference
+    }
 
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // --- Gemini API Integration ---
-        const API_KEY = "AIzaSyDyOWfMSKbFcC5QtV4o4KAtP9jC9FsrO3k";
-
-        async function callGeminiAPI(prompt, retries = 3, delay = 1000) {
-            let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
-            const payload = { contents: chatHistory };
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`;
-
-            for (let i = 0; i < retries; i++) {
-                try {
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-                    if (!response.ok) throw new Error(`API error: ${response.status}`);
-                    const result = await response.json();
-                    return result.candidates[0].content.parts[0].text;
-                } catch (error) {
-                    console.error("Error calling Gemini API:", error);
-                    if (i < retries - 1) {
-                        await new Promise(resolve => setTimeout(resolve, delay));
-                        delay *= 2;
-                    } else {
-                        throw error;
-                    }
-                }
-            }
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark')) {
+            setTheme('light');
+        } else {
+            setTheme('dark');
         }
-        
-        // --- AI Chatbot Popup Logic ---
-        const chatbotToggleBtn = document.getElementById('chatbot-toggle-btn');
-        const chatbotWindow = document.getElementById('chatbot-window-container');
-        const chatbotCloseBtn = document.getElementById('chatbot-close-btn');
-        const chatbotMessages = document.getElementById('chatbot-messages');
-        const chatbotUserInput = document.getElementById('chatbot-user-input');
-        const chatbotSendBtn = document.getElementById('chatbot-send-btn');
-        const chatbotLoading = document.getElementById('chatbot-loading');
-        const chatbotToggleIcon = document.getElementById('chatbot-toggle-icon');
+    });
 
-        function toggleChatbot() {
-            const isHidden = chatbotWindow.classList.contains('hidden');
-            if (isHidden) {
-                chatbotWindow.classList.remove('hidden');
-                setTimeout(() => {
-                    chatbotWindow.classList.remove('opacity-0', 'scale-95');
-                    chatbotWindow.classList.add('opacity-100', 'scale-100');
-                }, 10);
-                chatbotToggleIcon.classList.remove('fa-comments');
-                chatbotToggleIcon.classList.add('fa-times');
+    // Typing Effect for Hero Section
+    const taglineTextElement = document.getElementById('tagline-text');
+    const taglines = [
+        "Crafting efficient and scalable solutions.",
+        "Eager to learn and grow in the tech industry."
+    ];
+    let taglineIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100; // milliseconds per character
+    let deletingSpeed = 50; // milliseconds per character
+    let delayBeforeTypingNext = 1500; // milliseconds before typing next tagline
+
+    function typeEffect() {
+        const currentTagline = taglines[taglineIndex];
+        if (!isDeleting) {
+            taglineTextElement.textContent = currentTagline.substring(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === currentTagline.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, delayBeforeTypingNext);
             } else {
-                chatbotWindow.classList.remove('opacity-100', 'scale-100');
-                chatbotWindow.classList.add('opacity-0', 'scale-95');
-                setTimeout(() => {
-                    chatbotWindow.classList.add('hidden');
-                }, 300); // Match transition duration
-                chatbotToggleIcon.classList.remove('fa-times');
-                chatbotToggleIcon.classList.add('fa-comments');
+                setTimeout(typeEffect, typingSpeed);
+            }
+        } else {
+            taglineTextElement.textContent = currentTagline.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                isDeleting = false;
+                taglineIndex = (taglineIndex + 1) % taglines.length;
+                setTimeout(typeEffect, typingSpeed);
+            } else {
+                setTimeout(typeEffect, deletingSpeed);
             }
         }
+    }
+    document.addEventListener('DOMContentLoaded', typeEffect); // Start typing effect when DOM is ready
 
-        async function sendPopupMessage() {
-            const userMessage = chatbotUserInput.value.trim();
-            if (!userMessage) return;
+    // Scroll to Top Button Visibility
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    window.onscroll = function() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            scrollToTopBtn.classList.remove('hidden');
+        } else {
+            scrollToTopBtn.classList.add('hidden');
+        }
+    };
 
-            // Display user message
-            const userMessageContainer = document.createElement('div');
-            userMessageContainer.className = 'flex justify-end';
-            userMessageContainer.innerHTML = `<p class="bg-indigo-500 text-white rounded-lg px-3 py-2 max-w-xs">${userMessage}</p>`;
-            chatbotMessages.appendChild(userMessageContainer);
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 
-            chatbotUserInput.value = '';
-            chatbotLoading.classList.remove('hidden');
-            chatbotSendBtn.disabled = true;
+    // Skill Bar Animation on Scroll (Basic visibility check)
+    function animateSkillBars() {
+        const skillSections = document.querySelectorAll('#skills .glass-card');
+        skillSections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            // If section is in viewport
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                section.classList.add('animate-skill-bar');
+            } else {
+                section.classList.remove('animate-skill-bar'); // Reset if out of view
+            }
+        });
+    }
 
-            const fullPrompt = `You are Mahak Rathi's friendly and professional AI assistant. Answer questions about Mahak's background based ONLY on the provided JSON data. Be concise. If the info isn't in the data, say "I don't have that information, but you can contact Mahak directly to ask."\n\nDATA: ${JSON.stringify(mahakResumeData)}\n\nUSER QUESTION: ${userMessage}`;
+    window.addEventListener('scroll', animateSkillBars);
+    window.addEventListener('load', animateSkillBars); // Check on load too
+
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+
+    // --- Gemini API Integration ---
+
+    const API_KEY = "AIzaSyDyOWfMSKbFcC5QtV4o4KAtP9jC9FsrO3k"; // Canvas will automatically provide the API key at runtime
+
+    // Generic function for making Gemini API calls with exponential backoff
+    async function callGeminiAPI(prompt, retries = 3, delay = 1000) {
+        let chatHistory = [];
+        chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+        const payload = { contents: chatHistory };
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${API_KEY}`;
+
+        for (let i = 0; i < retries; i++) {
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    if (response.status === 429 && i < retries - 1) { // Too Many Requests
+                        console.warn(`Rate limit hit. Retrying in ${delay / 1000}s...`);
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        delay *= 2; // Exponential backoff
+                        continue;
+                    }
+                    throw new Error(`API error: ${response.status} ${response.statusText}`);
+                }
+
+                const result = await response.json();
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    return result.candidates[0].content.parts[0].text;
+                } else {
+                    throw new Error("Unexpected API response structure or no content.");
+                }
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                if (i < retries - 1) {
+                    console.warn(`Attempt ${i + 1} failed. Retrying in ${delay / 1000}s...`);
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    delay *= 2;
+                } else {
+                    throw error; // Re-throw if all retries fail
+                }
+            }
+        }
+        throw new Error("Failed to get response from Gemini API after multiple retries.");
+    }
+
+    // --- AI Assistant Chat Widget Logic ---
+    const chatWindow = document.getElementById('chat-window');
+    const userInput = document.getElementById('user-input');
+    const sendChatBtn = document.getElementById('send-chat-btn');
+    const chatLoading = document.getElementById('chat-loading');
+
+    async function sendMessage() {
+        const userMessage = userInput.value.trim();
+        if (!userMessage) return;
+
+        // Display user message
+        const userMessageDiv = document.createElement('p');
+        userMessageDiv.className = 'text-blue-700 dark:text-blue-300 mb-2';
+        userMessageDiv.innerHTML = `<strong>You:</strong> ${userMessage}`;
+        chatWindow.appendChild(userMessageDiv);
+        chatWindow.scrollTop = chatWindow.scrollHeight; // Scroll to bottom
+
+        userInput.value = ''; // Clear input
+        chatLoading.classList.remove('hidden'); // Show loading indicator
+        sendChatBtn.disabled = true;
+
+        const fullPrompt = `You are Mahak Rathi's AI assistant. Your goal is to answer questions about Mahak Rathi's professional background, skills, projects, education, certifications, and achievements ONLY based on the provided JSON data. If the answer is not available in the data, politely state that you cannot provide that information.
+
+        Mahak Rathi's Data:
+        ${JSON.stringify(mahakResumeData, null, 2)}
+
+        User's question: ${userMessage}`;
+
+        try {
+            const aiResponse = await callGeminiAPI(fullPrompt);
+
+            // Display AI response
+            const aiMessageDiv = document.createElement('p');
+            aiMessageDiv.className = 'text-gray-600 dark:text-gray-300 mb-2';
+            aiMessageDiv.innerHTML = `<strong>AI Assistant:</strong> ${aiResponse}`;
+            chatWindow.appendChild(aiMessageDiv);
+        } catch (error) {
+            console.error("Error fetching AI response:", error);
+            const errorMessageDiv = document.createElement('p');
+            errorMessageDiv.className = 'text-red-500 mb-2';
+            errorMessageDiv.innerHTML = `<strong>AI Assistant:</strong> Sorry, I'm having trouble connecting right now. Please try again later.`;
+            chatWindow.appendChild(errorMessageDiv);
+        } finally {
+            chatWindow.scrollTop = chatWindow.scrollHeight; // Scroll to bottom again
+            chatLoading.classList.add('hidden'); // Hide loading indicator
+            sendChatBtn.disabled = false;
+        }
+    }
+
+    sendChatBtn.addEventListener('click', sendMessage);
+    userInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // --- Describe Project with AI Logic ---
+    document.querySelectorAll('.describe-project-btn').forEach(button => {
+        button.addEventListener('click', async (event) => {
+            const projectName = event.target.dataset.projectName;
+            const projectDescription = event.target.dataset.projectDescription;
+            const projectParagraph = event.target.closest('.glass-card').querySelector('.project-description');
+            const originalDescription = projectParagraph.dataset.originalDescription;
+
+            // Toggle logic: If extended description is already shown, revert to original
+            if (projectParagraph.dataset.extended === 'true') {
+                projectParagraph.textContent = originalDescription;
+                projectParagraph.dataset.extended = 'false';
+                event.target.textContent = '✨ Describe with AI';
+                event.target.classList.remove('bg-gray-500', 'hover:bg-gray-600');
+                event.target.classList.add('bg-purple-600', 'hover:bg-purple-700');
+                return;
+            }
+
+            // Show loading indicator
+            event.target.textContent = 'Generating...';
+            event.target.disabled = true;
+            event.target.classList.add('bg-gray-500', 'cursor-not-allowed');
+            event.target.classList.remove('bg-purple-600', 'hover:bg-purple-700');
+
+
+            const prompt = `Elaborate on the project "${projectName}" by Mahak Rathi. Here is the current summary: "${projectDescription}". Explain its significance, potential impact, and technical aspects in about 2-3 sentences.`;
 
             try {
-                const aiResponse = await callGeminiAPI(fullPrompt);
-                const aiMessageContainer = document.createElement('div');
-                aiMessageContainer.className = 'flex';
-                aiMessageContainer.innerHTML = `<p class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg px-3 py-2 max-w-xs"><strong>AI:</strong> ${aiResponse}</p>`;
-                chatbotMessages.appendChild(aiMessageContainer);
+                const aiGeneratedDescription = await callGeminiAPI(prompt);
+                projectParagraph.textContent = aiGeneratedDescription;
+                projectParagraph.dataset.extended = 'true'; // Mark as extended
+                event.target.textContent = 'Collapse Description';
+                event.target.classList.remove('bg-gray-500');
+                event.target.classList.add('bg-indigo-700', 'hover:bg-indigo-800'); // Change button style
             } catch (error) {
-                const errorMessageContainer = document.createElement('div');
-                errorMessageContainer.className = 'flex';
-                errorMessageContainer.innerHTML = `<p class="bg-red-100 dark:bg-red-800 text-red-700 dark:text-red-200 rounded-lg px-3 py-2 max-w-xs"><strong>AI:</strong> Sorry, I'm having trouble connecting. Please try again.</p>`;
-                chatbotMessages.appendChild(errorMessageContainer);
+                console.error("Error describing project with AI:", error);
+                projectParagraph.textContent = originalDescription + " (Failed to generate AI description. Please try again later.)";
+                projectParagraph.dataset.extended = 'false';
+                event.target.textContent = '✨ Describe with AI';
+                event.target.classList.remove('bg-gray-500', 'hover:bg-gray-600');
+                event.target.classList.add('bg-purple-600', 'hover:bg-purple-700');
             } finally {
-                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-                chatbotLoading.classList.add('hidden');
-                chatbotSendBtn.disabled = false;
-                chatbotUserInput.focus();
-            }
-        }
-
-        chatbotToggleBtn.addEventListener('click', toggleChatbot);
-        chatbotCloseBtn.addEventListener('click', toggleChatbot);
-        chatbotSendBtn.addEventListener('click', sendPopupMessage);
-        chatbotUserInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                sendPopupMessage();
+                event.target.disabled = false;
             }
         });
+    });
 
-        // --- Describe Project with AI Logic ---
-        document.querySelectorAll('.describe-project-btn').forEach(button => {
-            button.addEventListener('click', async (event) => {
-                const projectName = event.target.dataset.projectName;
-                const projectDescription = event.target.dataset.projectDescription;
-                const projectParagraph = event.target.closest('.glass-card').querySelector('.project-description');
-                const originalDescription = projectParagraph.dataset.originalDescription;
-
-                if (projectParagraph.dataset.extended === 'true') {
-                    projectParagraph.textContent = originalDescription;
-                    projectParagraph.dataset.extended = 'false';
-                    event.target.innerHTML = '✨ Describe with AI';
-                    return;
-                }
-
-                event.target.textContent = 'Generating...';
-                event.target.disabled = true;
-
-                const prompt = `Elaborate on the project "${projectName}" by Mahak Rathi. Summary: "${projectDescription}". Explain its significance, potential impact, and technical aspects in 2-3 engaging sentences.`;
-
-                try {
-                    const aiGeneratedDescription = await callGeminiAPI(prompt);
-                    projectParagraph.textContent = aiGeneratedDescription;
-                    projectParagraph.dataset.extended = 'true';
-                    event.target.textContent = 'Collapse';
-                } catch (error) {
-                    projectParagraph.textContent = originalDescription + " (AI description failed to load.)";
-                    projectParagraph.dataset.extended = 'false';
-                    event.target.innerHTML = '✨ Describe with AI';
-                } finally {
-                    event.target.disabled = false;
-                }
-            });
-        });
-
-    </script>
+</script>
 </body>
 </html>
